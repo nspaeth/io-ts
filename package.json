@@ -17,6 +17,7 @@
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-es6.json && npm run import-path-rewrite && ts-node scripts/build",
     "postbuild": "prettier --loglevel=silent --write \"./dist/**/*.ts\"",
+		"prepare": "npm run build",
     "prepublishOnly": "ts-node scripts/pre-publish",
     "perf": "ts-node perf/index",
     "dtslint": "dtslint dtslint",
